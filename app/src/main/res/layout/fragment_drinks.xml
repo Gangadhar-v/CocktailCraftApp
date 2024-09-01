@@ -6,10 +6,9 @@
     tools:context=".DrinksFragment">
 
 
-    <TextView
-        android:id="@+id/f2tv"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/drinksRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

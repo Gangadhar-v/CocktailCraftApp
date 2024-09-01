@@ -1,9 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="15dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <ImageView
+            android:id="@+id/cocktailImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="cockTail Image"
+            android:background="@drawable/ic_launcher_background"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/cocktailNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cocktailImg"
+            android:layout_marginStart="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:text="Drink Name"/>
+        <TextView
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingredients And Measurement"
+            android:textSize="16sp"
+            android:layout_below="@id/cocktailNameTv"
+            android:layout_toRightOf="@id/cocktailImg"
+            android:layout_marginStart="18dp"/>
+
+        <LinearLayout
+           android:id="@+id/ingreNmeaseLyt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/a"
+            android:layout_toRightOf="@id/cocktailImg"
+            >
+
+            <TextView
+                android:id="@+id/ingredientsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_blue_dark"
+                android:text="Ingredients"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/measuresTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:text="MeasureMent"
+                android:layout_marginStart="4dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:lineSpacingExtra="2dp"
+            android:textAllCaps="true"
+            android:text="Instructions"
+            android:textStyle="bold"
+            android:layout_below="@id/ingreNmeaseLyt"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/drinkInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="2dp"
+            android:text="Instructions"
+            android:layout_below="@id/display"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
